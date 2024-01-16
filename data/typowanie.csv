@@ -1,63 +1,53 @@
-,Round Number,Group,Date,Home Team,Home Result,Away Result,Away Team,Kwiatek Home Result,Kwiatek Away Result,Kwiatek Points,Filip Home Result,Filip Away Result,Filip Points,Komar Home Result,Komar Away Result,Komar Points,Artur Home Result,Artur Away Result,Artur Points,Mati Home Result,Mati Away Result,Mati Points,Plech Home Result,Plech Away Result,Plech Points,Lesiu Home Result,Lesiu Away Result,Lesiu Points
-0,1,Group A,13/01/2024 21:00,Côte d'Ivoire,0,0,Guinea-Bissau,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-1,1,Group A,14/01/2024 15:00,Nigeria,0,0,Equatorial Guinea,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-2,1,Group B,14/01/2024 18:00,Egypt,0,0,Mozambique,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-3,1,Group B,14/01/2024 21:00,Ghana,0,0,Cabo Verde,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-4,1,Group C,15/01/2024 15:00,Senegal,0,0,Gambia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-5,1,Group C,15/01/2024 18:00,Cameroon,0,0,Guinea,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-6,1,Group D,15/01/2024 21:00,Algeria,0,0,Angola,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-7,1,Group D,16/01/2024 15:00,Burkina Faso,0,0,Mauritania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-8,1,Group E,16/01/2024 18:00,Tunisia,0,0,Namibia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-9,1,Group E,16/01/2024 21:00,Mali,0,0,South Africa,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-10,1,Group F,17/01/2024 18:00,Morocco,0,0,Tanzania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-11,1,Group F,17/01/2024 21:00,Congo DR,0,0,Zambia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-12,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-13,2,Group A,18/01/2024 15:00,Equatorial Guinea,0,0,Guinea-Bissau,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-14,2,Group A,18/01/2024 18:00,Côte d'Ivoire,0,0,Nigeria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-15,2,Group B,18/01/2024 21:00,Egypt,0,0,Ghana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-16,2,Group B,19/01/2024 15:00,Cabo Verde,0,0,Mozambique,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-17,2,Group C,19/01/2024 18:00,Senegal,0,0,Cameroon,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-18,2,Group C,19/01/2024 21:00,Guinea,0,0,Gambia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-19,2,Group D,20/01/2024 15:00,Algeria,0,0,Burkina Faso,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-20,2,Group D,20/01/2024 18:00,Mauritania,0,0,Angola,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-21,2,Group E,20/01/2024 21:00,Tunisia,0,0,Mali,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-22,2,Group F,21/01/2024 15:00,Morocco,0,0,Congo DR,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-23,2,Group F,21/01/2024 18:00,Zambia,0,0,Tanzania,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-24,2,Group E,21/01/2024 21:00,South Africa,0,0,Namibia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-25,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-26,3,Group A,22/01/2024 18:00,Equatorial Guinea,0,0,Côte d'Ivoire,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-27,3,Group A,22/01/2024 18:00,Guinea-Bissau,0,0,Nigeria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-28,3,Group B,22/01/2024 21:00,Mozambique,0,0,Ghana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-29,3,Group B,22/01/2024 21:00,Cabo Verde,0,0,Egypt,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-30,3,Group C,23/01/2024 18:00,Guinea,0,0,Senegal,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-31,3,Group C,23/01/2024 18:00,Gambia,0,0,Cameroon,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-32,3,Group D,23/01/2024 21:00,Angola,0,0,Burkina Faso,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-33,3,Group D,23/01/2024 21:00,Mauritania,0,0,Algeria,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-34,3,Group E,24/01/2024 18:00,South Africa,0,0,Tunisia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-35,3,Group E,24/01/2024 18:00,Namibia,0,0,Mali,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-36,3,Group F,24/01/2024 21:00,Tanzania,0,0,Congo DR,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-37,3,Group F,24/01/2024 21:00,Zambia,0,0,Morocco,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-38,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-39,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-40,Round of 16,,27/01/2024 18:00,Group D Winner,0,0,Third Place Group B/E/F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-41,Round of 16,,27/01/2024 21:00,Group A Second Place,0,0,Group C Second Place,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-42,Round of 16,,28/01/2024 18:00,Group A Winner,0,0,Third Place Group C/D/E,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-43,Round of 16,,28/01/2024 21:00,Group B Second Place,0,0,Group F Second Place,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-44,Round of 16,,29/01/2024 18:00,Group B Winner,0,0,Third Place Group A/C/D,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-45,Round of 16,,29/01/2024 21:00,Group C Winner,0,0,Third Place Group A/B/F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-46,Round of 16,,30/01/2024 18:00,Group E Winner,0,0,Group D Second Place,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-47,Round of 16,,30/01/2024 21:00,Group F Winner,0,0,Group E Second Place,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-48,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-49,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-50,Quarter Finals,,02/02/2024 18:00,To be announced,0,0,To be announced,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-51,Quarter Finals,,02/02/2024 21:00,To be announced,0,0,To be announced,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-52,Quarter Finals,,03/02/2024 18:00,To be announced,0,0,To be announced,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-53,Quarter Finals,,03/02/2024 21:00,To be announced,0,0,To be announced,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-54,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-55,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-56,Semi Finals,,07/02/2024 18:00,To be announced,0,0,To be announced,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-57,Semi Finals,,07/02/2024 21:00,To be announced,0,0,To be announced,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-58,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-59,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-60,Finals,,10/02/2024 21:00,To be announced,0,0,To be announced,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-61,Finals,,11/02/2024 21:00,To be announced,0,0,To be announced,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,Match Number,Round Number,Date,Location,Home Team,Away Team,Group,Result
+0,1,1,13/01/2024 21:00,"Alassane Ouattara Stadium, Abidjan",Côte d'Ivoire,Guinea-Bissau,Group A,
+1,2,1,14/01/2024 15:00,"Alassane Ouattara Stadium, Abidjan",Nigeria,Equatorial Guinea,Group A,
+2,3,1,14/01/2024 18:00,"Felix Houphouet Boigny Stadium, Abidjan",Egypt,Mozambique,Group B,
+3,4,1,14/01/2024 21:00,"Felix Houphouet Boigny Stadium, Abidjan",Ghana,Cabo Verde,Group B,
+4,5,1,15/01/2024 15:00,"Charles Konan Banny Stadium, Yamoussoukro",Senegal,Gambia,Group C,
+5,6,1,15/01/2024 18:00,"Charles Konan Banny Stadium, Yamoussoukro",Cameroon,Guinea,Group C,
+6,7,1,15/01/2024 21:00,"Stade de la Paix, Bouaké",Algeria,Angola,Group D,
+7,8,1,16/01/2024 15:00,"Stade de la Paix, Bouaké",Burkina Faso,Mauritania,Group D,
+8,9,1,16/01/2024 18:00,"Amadou Gon Coulibaly Stadium, Korhogo",Tunisia,Namibia,Group E,
+9,10,1,16/01/2024 21:00,"Amadou Gon Coulibaly Stadium, Korhogo",Mali,South Africa,Group E,
+10,11,1,17/01/2024 18:00,"Laurent Pokou Stadium, San Pédro",Morocco,Tanzania,Group F,
+11,12,1,17/01/2024 21:00,"Laurent Pokou Stadium, San Pédro",Congo DR,Zambia,Group F,
+12,13,2,18/01/2024 15:00,"Alassane Ouattara Stadium, Abidjan",Equatorial Guinea,Guinea-Bissau,Group A,
+13,14,2,18/01/2024 18:00,"Alassane Ouattara Stadium, Abidjan",Côte d'Ivoire,Nigeria,Group A,
+14,15,2,18/01/2024 21:00,"Felix Houphouet Boigny Stadium, Abidjan",Egypt,Ghana,Group B,
+15,16,2,19/01/2024 15:00,"Felix Houphouet Boigny Stadium, Abidjan",Cabo Verde,Mozambique,Group B,
+16,17,2,19/01/2024 18:00,"Charles Konan Banny Stadium, Yamoussoukro",Senegal,Cameroon,Group C,
+17,18,2,19/01/2024 21:00,"Charles Konan Banny Stadium, Yamoussoukro",Guinea,Gambia,Group C,
+18,19,2,20/01/2024 15:00,"Stade de la Paix, Bouaké",Algeria,Burkina Faso,Group D,
+19,20,2,20/01/2024 18:00,"Stade de la Paix, Bouaké",Mauritania,Angola,Group D,
+20,21,2,20/01/2024 21:00,"Amadou Gon Coulibaly Stadium, Korhogo",Tunisia,Mali,Group E,
+21,23,2,21/01/2024 15:00,"Laurent Pokou Stadium, San Pédro",Morocco,Congo DR,Group F,
+22,24,2,21/01/2024 18:00,"Laurent Pokou Stadium, San Pédro",Zambia,Tanzania,Group F,
+23,22,2,21/01/2024 21:00,"Amadou Gon Coulibaly Stadium, Korhogo",South Africa,Namibia,Group E,
+24,25,3,22/01/2024 18:00,"Alassane Ouattara Stadium, Abidjan",Equatorial Guinea,Côte d'Ivoire,Group A,
+25,26,3,22/01/2024 18:00,"Felix Houphouet Boigny Stadium, Abidjan",Guinea-Bissau,Nigeria,Group A,
+26,27,3,22/01/2024 21:00,"Charles Konan Banny Stadium, Yamoussoukro",Mozambique,Ghana,Group B,
+27,28,3,22/01/2024 21:00,"Felix Houphouet Boigny Stadium, Abidjan",Cabo Verde,Egypt,Group B,
+28,29,3,23/01/2024 18:00,"Charles Konan Banny Stadium, Yamoussoukro",Guinea,Senegal,Group C,
+29,30,3,23/01/2024 18:00,"Stade de la Paix, Bouaké",Gambia,Cameroon,Group C,
+30,31,3,23/01/2024 21:00,"Charles Konan Banny Stadium, Yamoussoukro",Angola,Burkina Faso,Group D,
+31,32,3,23/01/2024 21:00,"Stade de la Paix, Bouaké",Mauritania,Algeria,Group D,
+32,33,3,24/01/2024 18:00,"Amadou Gon Coulibaly Stadium, Korhogo",South Africa,Tunisia,Group E,
+33,34,3,24/01/2024 18:00,"Laurent Pokou Stadium, San Pédro",Namibia,Mali,Group E,
+34,35,3,24/01/2024 21:00,"Amadou Gon Coulibaly Stadium, Korhogo",Tanzania,Congo DR,Group F,
+35,36,3,24/01/2024 21:00,"Laurent Pokou Stadium, San Pédro",Zambia,Morocco,Group F,
+36,37,Round of 16,27/01/2024 18:00,"Stade de la Paix, Bouaké",Group D Winner,Third Place Group B/E/F,,
+37,38,Round of 16,27/01/2024 21:00,"Felix Houphouet Boigny Stadium, Abidjan",Group A Second Place,Group C Second Place,,
+38,39,Round of 16,28/01/2024 18:00,"Alassane Ouattara Stadium, Abidjan",Group A Winner,Third Place Group C/D/E,,
+39,40,Round of 16,28/01/2024 21:00,"Laurent Pokou Stadium, San Pédro",Group B Second Place,Group F Second Place,,
+40,41,Round of 16,29/01/2024 18:00,"Felix Houphouet Boigny Stadium, Abidjan",Group B Winner,Third Place Group A/C/D,,
+41,42,Round of 16,29/01/2024 21:00,"Charles Konan Banny Stadium, Yamoussoukro",Group C Winner,Third Place Group A/B/F,,
+42,43,Round of 16,30/01/2024 18:00,"Amadou Gon Coulibaly Stadium, Korhogo",Group E Winner,Group D Second Place,,
+43,44,Round of 16,30/01/2024 21:00,"Laurent Pokou Stadium, San Pédro",Group F Winner,Group E Second Place,,
+44,45,Quarter Finals,02/02/2024 18:00,"Felix Houphouet Boigny Stadium, Abidjan",To be announced,To be announced,,
+45,46,Quarter Finals,02/02/2024 21:00,"Alassane Ouattara Stadium, Abidjan",To be announced,To be announced,,
+46,47,Quarter Finals,03/02/2024 18:00,"Stade de la Paix, Bouaké",To be announced,To be announced,,
+47,48,Quarter Finals,03/02/2024 21:00,"Charles Konan Banny Stadium, Yamoussoukro",To be announced,To be announced,,
+48,49,Semi Finals,07/02/2024 18:00,"Stade de la Paix, Bouaké",To be announced,To be announced,,
+49,50,Semi Finals,07/02/2024 21:00,"Alassane Ouattara Stadium, Abidjan",To be announced,To be announced,,
+50,51,Finals,10/02/2024 21:00,"Felix Houphouet Boigny Stadium, Abidjan",To be announced,To be announced,,
+51,52,Finals,11/02/2024 21:00,"Alassane Ouattara Stadium, Abidjan",To be announced,To be announced,,

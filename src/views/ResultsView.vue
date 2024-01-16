@@ -17,13 +17,16 @@ let pageTitle = ref("Wyniki")
     </v-row>
     <v-row>
       <v-col cols="12">
+        <the-next-game :games="afconDb['games']"></the-next-game>
+      </v-col>
+      <v-col cols="12">
         <leader-board :results="afconDb['leaders']" :title="'Punkty'" :subtitle="'Suma punktów'"></leader-board>
       </v-col>
       <v-col cols="12">
-        <leader-board :results="afconDb['pizda_streaks']" :title="'Pizda streak'" :subtitle="'Najdłuższy streak 0 punktów'"></leader-board>
+        <leader-board :results="afconDb['snipers']" :title="'Snajperzy'" :subtitle="'Ilość trafionych wyników'"></leader-board>
       </v-col>
       <v-col cols="12">
-        <the-next-game :games="afconDb['games']"></the-next-game>
+        <leader-board :results="afconDb['pizda_streaks']" :title="'Pizda streak'" :subtitle="'Najdłuższy streak 0 punktów'"></leader-board>
       </v-col>
     </v-row>
   </v-container>

@@ -5,7 +5,7 @@ import numpy as np
 from itertools import groupby
 
 DATA_FOLDER = './data/'
-OUTPUT_FOLDER = './public/'
+OUTPUT_FOLDER = './src/'
 NAMES = ['Kwiatek', 'Filip', 'Komar', 'Artur', 'Mati', 'Plech', 'Lesiu', 'Komar jr']
 
 def refresh_data():
@@ -92,13 +92,31 @@ def rename_cols(df: pd.DataFrame):
         'Unnamed: 29': 'Komar jr Away',
     })
 
+def get_snipers(df):
+    sniper_df = df.iloc[:-1]
+    sniper_df["Date"] = pd.to_datetime(sniper_df["Date"], dayfirst=True)
+    sniper_df = sniper_df[sniper_df["Date"] < np.datetime64('now') - np.timedelta64(2, 'h')]
+    sniper_df = sniper_df[[f"{name} Points" for name in NAMES]]
+    snipers_dict = {}
+    snipers_dict = {f"{name}" : (sniper_df[f"{name} Points"].value_counts().get(3, 0) + sniper_df[f"{name} Points"].value_counts().get(4, 0)) for name in NAMES}
+    res = pd.Series(snipers_dict)
+    res = res.sort_values(ascending=False)
+    res = res.to_frame()
+    res['points'] = res[0]
+    res['name'] = res.index
+    res = res[['name','points']]
+
+    return list(res.T.to_dict().values())
+
 refresh_data()
 data_df = read_data()
+data_df = data_df.replace({np.nan: None})
 db = {}
 
 db['leaders'] = get_leaders(data_df)
 db['pizda_streaks'] = get_pizda_streaks(data_df)
 db['games'] = get_games_data(data_df)
+db['snipers'] = get_snipers(data_df)
 
 with open(OUTPUT_FOLDER + "db.json", "w") as outfile: 
     json.dump(db, outfile)
