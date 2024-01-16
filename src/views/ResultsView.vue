@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import db from "../db.json"
 import LeaderBoard from "../components/LeaderBoard.vue"
+import TheNextGame from "../components/TheNextGame.vue"
 
 let afconDb = ref(db)
 let pageTitle = ref("Wyniki")
@@ -20,6 +21,9 @@ let pageTitle = ref("Wyniki")
       </v-col>
       <v-col cols="12">
         <leader-board :results="afconDb['pizda_streaks']" :title="'Pizda streak'" :subtitle="'Najdłuższy streak 0 punktów'"></leader-board>
+      </v-col>
+      <v-col cols="12">
+        <the-next-game :games="afconDb['games']"></the-next-game>
       </v-col>
     </v-row>
   </v-container>

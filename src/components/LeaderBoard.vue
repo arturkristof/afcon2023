@@ -7,15 +7,19 @@ const props = defineProps<{
 }>()
 
 const rankedItems = computed(() => {
-  let rawResults = [ ...props.results ]
   let lastVal = -1
   let lastRank = 0
-  rawResults.forEach(entry => {
+  let rawResults = []
+
+  props.results.forEach(entry => {
     if (entry.points != lastVal) {
       lastVal = entry.points
       lastRank += 1
     }
-    entry['rank'] = lastRank
+    rawResults.push({
+      ...entry,
+      rank: lastRank
+    })
   })
   return rawResults
 })
