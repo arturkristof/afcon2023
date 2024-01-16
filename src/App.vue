@@ -3,12 +3,16 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <v-app>
+  <v-app class="white">
     <v-main>
-      <span>Testing app</span>
       <router-view> </router-view>
     </v-main>
   </v-app>
 </template>
 
-<style scoped></style>
+<style>
+body {
+  background-color: #FFFFFF !important
+  ;
+}
+</style>
