@@ -3,13 +3,13 @@ import { computed } from 'vue'
 const props = defineProps<{
   title: string,
   subtitle: string,
-  results: Object[]
+  results: any[]
 }>()
 
 const rankedItems = computed(() => {
   let lastVal = -1
   let lastRank = 0
-  let rawResults = []
+  let rawResults: any[] = []
 
   props.results.forEach(entry => {
     if (entry.points != lastVal) {

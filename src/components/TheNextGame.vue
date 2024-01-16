@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import moment from 'moment'
 
 const props = defineProps<{
-  games: Object[],
+  games: any[],
 }>()
 
 const nextGames = computed(() => props.games.filter(game => {
@@ -14,7 +14,7 @@ const nextGames = computed(() => props.games.filter(game => {
 const nextGame = computed(() => nextGames.value[0])
 const names = ['Kwiatek', 'Filip', 'Komar', 'Artur', 'Mati', 'Plech', 'Lesiu', 'Komar jr']
 const items = computed(() => {
-  let res = []
+  let res: any[] = []
   names.forEach(name => {
     res.push({
       name,
@@ -24,11 +24,23 @@ const items = computed(() => {
   })
   return res
 })
-const headers = computed(() => [
-  {title: '', value: 'name'},
-  {title: nextGame.value['Home Team'], value: 'home', align: 'end'},
-  {title: nextGame.value['Away Team'], value: 'away'},
-])
+
+import type { VDataTable } from 'vuetify/components'
+
+type ReadonlyHeaders = VDataTable['headers']
+type UnwrapReadonlyArrayType<A> = A extends Readonly<Array<infer I>> ? I : never;
+type ReadonlyDataTableHeader = UnwrapReadonlyArrayType<ReadonlyHeaders>;
+
+type DeepMutable<T> = { -readonly [P in keyof T]: DeepMutable<T[P]> }
+type DataTableHeader = DeepMutable<ReadonlyDataTableHeader>;
+// @ts-expect-error
+const headers: DataTableHeader[] = computed(() => {
+  return [
+    { title: '', value: 'name', align: 'start' },
+    { title: nextGame.value['Home Team'], value: 'home', align: 'end' },
+    { title: nextGame.value['Away Team'], value: 'away', align: 'start' },
+  ]
+})
 </script>
 <template>
   <v-card class="mx-auto my-8" elevation="16">
@@ -45,6 +57,7 @@ const headers = computed(() => [
     </v-card-item>
 
     <v-card-text>
+      <!-- @vue-ignore -->
       <v-data-table :items="items" :headers="headers" density="compact">
         <template #bottom></template>
       </v-data-table>
