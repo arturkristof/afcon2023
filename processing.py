@@ -5,6 +5,7 @@ import numpy as np
 from itertools import groupby
 
 DATA_FOLDER = './data/'
+OUTPUT_FOLDER = './public/'
 NAMES = ['Kwiatek', 'Filip', 'Komar', 'Artur', 'Mati', 'Plech', 'Lesiu', 'Komar jr']
 
 def refresh_data():
@@ -99,7 +100,7 @@ db['leaders'] = get_leaders(data_df)
 db['pizda_streaks'] = get_pizda_streaks(data_df)
 db['games'] = get_games_data(data_df)
 
-with open(DATA_FOLDER + "db.json", "w") as outfile: 
+with open(OUTPUT_FOLDER + "db.json", "w") as outfile: 
     json.dump(db, outfile)
 
 
