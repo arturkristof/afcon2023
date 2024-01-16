@@ -1,15 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import db from "./db.json"
-
-let afconDb = ref(db)
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
   <v-app>
     <v-main>
-      <span> Testing </span>
-      {{ afconDb['leaders'] }}
+      <span>Testing app</span>
+      <router-view> </router-view>
     </v-main>
   </v-app>
 </template>
