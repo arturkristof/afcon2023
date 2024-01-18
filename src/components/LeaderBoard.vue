@@ -18,6 +18,7 @@ const items = computed(() => {
     }
     rawResults.push({
       ...entry,
+      picture: `${entry.name}.jpg`,
       rank: lastRank
     })
   })
@@ -27,6 +28,7 @@ const items = computed(() => {
 const headers = computed(() => {
   return [
     { title: 'Rank', value: 'rank', align: 'end' },
+    { title: '', value: 'picture', align: 'end' },
     { title: 'Name', value: 'name', align: 'start' },
     { title: 'Value', value: 'points', align: 'start' }
   ]
@@ -48,6 +50,9 @@ const headers = computed(() => {
     <v-card-text>
       <!-- @vue-ignore -->
       <v-data-table :items="items" :headers="headers" density="compact">
+        <template v-slot:item.picture="{ value }">
+          <v-avatar :image="value" :size="30"></v-avatar>
+        </template>
         <template #bottom></template>
       </v-data-table>
     </v-card-text>
@@ -55,7 +60,7 @@ const headers = computed(() => {
 </template>
 
 <style scoped>
-:deep(tbody tr):hover{
+:deep(tbody tr):hover {
   background-color: #CFCFCF !important;
 }
 </style>

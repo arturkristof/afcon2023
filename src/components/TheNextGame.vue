@@ -18,6 +18,7 @@ const items = computed(() => {
   names.forEach(name => {
     res.push({
       name,
+      picture: `${name}.jpg`,
       home: nextGame.value[`${name} Home`],
       colon: ':',
       away: nextGame.value[`${name} Away`],
@@ -28,6 +29,7 @@ const items = computed(() => {
 
 const headers = computed(() => {
   return [
+    { title: '', value: 'picture', align: 'end' },
     { title: '', value: 'name', align: 'end' },
     { title: nextGame.value['Home Team'], value: 'home', align: 'end' },
     { title: '-', value: 'colon', align: 'end', width: '10px' },
@@ -52,6 +54,9 @@ const headers = computed(() => {
     <v-card-text>
       <!-- @vue-ignore -->
       <v-data-table :items="items" :headers="headers" density="compact">
+        <template v-slot:item.picture="{ value }">
+          <v-avatar :image="value" :size="30"></v-avatar>
+        </template>
         <template #bottom></template>
       </v-data-table>
     </v-card-text>
