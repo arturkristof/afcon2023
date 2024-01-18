@@ -19,25 +19,18 @@ const items = computed(() => {
     res.push({
       name,
       home: nextGame.value[`${name} Home`],
+      colon: ':',
       away: nextGame.value[`${name} Away`],
     })
   })
   return res
 })
 
-import type { VDataTable } from 'vuetify/components'
-
-type ReadonlyHeaders = VDataTable['headers']
-type UnwrapReadonlyArrayType<A> = A extends Readonly<Array<infer I>> ? I : never;
-type ReadonlyDataTableHeader = UnwrapReadonlyArrayType<ReadonlyHeaders>;
-
-type DeepMutable<T> = { -readonly [P in keyof T]: DeepMutable<T[P]> }
-type DataTableHeader = DeepMutable<ReadonlyDataTableHeader>;
-// @ts-expect-error
-const headers: DataTableHeader[] = computed(() => {
+const headers = computed(() => {
   return [
-    { title: '', value: 'name', align: 'start' },
+    { title: '', value: 'name', align: 'end' },
     { title: nextGame.value['Home Team'], value: 'home', align: 'end' },
+    { title: '-', value: 'colon', align: 'end', width: '10px' },
     { title: nextGame.value['Away Team'], value: 'away', align: 'start' },
   ]
 })
@@ -64,3 +57,17 @@ const headers: DataTableHeader[] = computed(() => {
     </v-card-text>
   </v-card>
 </template>
+
+<style scoped>
+:deep(td):nth-child(n+2){
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+:deep(th):nth-child(n+2){
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+:deep(tbody tr):hover{
+  background-color: #CFCFCF !important;
+}
+</style>

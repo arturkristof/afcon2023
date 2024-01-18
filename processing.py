@@ -54,14 +54,7 @@ def get_pizda_streaks(df: pd.DataFrame):
     pizda_df = pizda_df[point_columns]
     pizda_streak_dict = {f"{name}" : get_longest_pizda_streak(pizda_df[f"{name} Points"]) for name in NAMES}
 
-    pizda_streaks = pd.Series(pizda_streak_dict)
-    pizda_streaks = pizda_streaks.sort_values(ascending=False)
-    pizda_streaks = pizda_streaks.to_frame()
-    pizda_streaks['points'] = pizda_streaks[0]
-    pizda_streaks['name'] = pizda_streaks.index
-    pizda_streaks = pizda_streaks[['name','points']]
-    
-    return list(pizda_streaks.T.to_dict().values())
+    return sorted_dict(pizda_streak_dict)
 
 def get_games_data(df: pd.DataFrame):
     games_df = df.iloc[:-1]
@@ -92,6 +85,16 @@ def rename_cols(df: pd.DataFrame):
         'Unnamed: 29': 'Komar jr Away',
     })
 
+def sorted_dict(d: dict, ascending=False):    
+    res = pd.Series(d)
+    res = res.sort_values(ascending=ascending)
+    res = res.to_frame()
+    res['points'] = res[0]
+    res['name'] = res.index
+    res = res[['name','points']]
+
+    return list(res.T.to_dict().values())
+    
 def get_snipers(df):
     sniper_df = df.iloc[:-1]
     sniper_df["Date"] = pd.to_datetime(sniper_df["Date"], dayfirst=True)
@@ -99,14 +102,9 @@ def get_snipers(df):
     sniper_df = sniper_df[[f"{name} Points" for name in NAMES]]
     snipers_dict = {}
     snipers_dict = {f"{name}" : (sniper_df[f"{name} Points"].value_counts().get(3, 0) + sniper_df[f"{name} Points"].value_counts().get(4, 0)) for name in NAMES}
-    res = pd.Series(snipers_dict)
-    res = res.sort_values(ascending=False)
-    res = res.to_frame()
-    res['points'] = res[0]
-    res['name'] = res.index
-    res = res[['name','points']]
+    
+    return sorted_dict(snipers_dict)
 
-    return list(res.T.to_dict().values())
 
 refresh_data()
 data_df = read_data()

@@ -6,7 +6,7 @@ const props = defineProps<{
   results: any[]
 }>()
 
-const rankedItems = computed(() => {
+const items = computed(() => {
   let lastVal = -1
   let lastRank = 0
   let rawResults: any[] = []
@@ -24,6 +24,14 @@ const rankedItems = computed(() => {
   return rawResults
 })
 
+const headers = computed(() => {
+  return [
+    { title: 'Rank', value: 'rank', align: 'end' },
+    { title: 'Name', value: 'name', align: 'start' },
+    { title: 'Value', value: 'points', align: 'start' }
+  ]
+})
+
 
 </script>
 <template>
@@ -38,8 +46,16 @@ const rankedItems = computed(() => {
     </v-card-item>
 
     <v-card-text>
-      <v-list :items="rankedItems" :item-title="item => `${item.rank}. ${item.name} - ${item.points}`" item-value="points">
-      </v-list>
+      <!-- @vue-ignore -->
+      <v-data-table :items="items" :headers="headers" density="compact">
+        <template #bottom></template>
+      </v-data-table>
     </v-card-text>
   </v-card>
 </template>
+
+<style scoped>
+:deep(tbody tr):hover{
+  background-color: #CFCFCF !important;
+}
+</style>
