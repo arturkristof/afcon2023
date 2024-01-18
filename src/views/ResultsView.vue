@@ -28,6 +28,9 @@ let pageTitle = ref("Wyniki")
       <v-col cols="12">
         <leader-board :results="afconDb['pizda_streaks']" :title="'Pizda streak'" :subtitle="'Najdłuższy streak 0 punktów'"></leader-board>
       </v-col>
+      <v-col cols="12">
+        <leader-board :results="afconDb['top_scorers']" :title="'Król strzelców'" :subtitle="'Ilość goli'"></leader-board>
+      </v-col>
     </v-row>
   </v-container>
 </template>

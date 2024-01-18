@@ -64,6 +64,13 @@ const headers = computed(() => {
 </template>
 
 <style scoped>
+:deep(td):nth-child(n+3) {
+  font-weight: bold !important
+}
+
+:deep(th):nth-child(n+3) {
+  font-weight: bold !important;
+}
 :deep(td):nth-child(n+2){
   padding-left: 4px !important;
   padding-right: 4px !important;

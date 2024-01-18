@@ -7,11 +7,10 @@ from itertools import groupby
 DATA_FOLDER = './data/'
 OUTPUT_FOLDER = './src/'
 NAMES = ['Kwiatek', 'Filip', 'Komar', 'Artur', 'Mati', 'Plech', 'Lesiu', 'Komar jr']
+SHEETS_FILE_KEY = "1ZOZOwm_V-b2YwLNAHaKKdIhfZ4oR5wiqfr699nv7amA"
 
-def refresh_data():
-    path = DATA_FOLDER + "typy.csv"
-    key = "1ZOZOwm_V-b2YwLNAHaKKdIhfZ4oR5wiqfr699nv7amA"
-    sheet = "Mecze"
+def refresh_data(key: str, sheet: str, output_filename: str):
+    path = DATA_FOLDER + output_filename
     
     response = requests.get(f'https://docs.google.com/spreadsheets/d/{key}/gviz/tq?tqx=out:csv&sheet={sheet}')
     assert response.status_code == 200, 'Wrong status code'
@@ -19,11 +18,25 @@ def refresh_data():
     with open(path, "wb") as file:   
         file.write(response.content)
 
-def read_data():
+def refresh_prediction_data():
+    refresh_data(SHEETS_FILE_KEY, "Mecze", "typy.csv")
+
+def refresh_standings_data():
+    refresh_data(SHEETS_FILE_KEY, "Standings", "standings.csv")
+
+
+def read_prediction_data():
     path = DATA_FOLDER + "typy.csv"
     typy_df = pd.read_csv(path, nrows=66)
     typy_df = typy_df[typy_df['Mati Points'].notnull()]
     return typy_df
+
+def read_standings_data():
+    path = DATA_FOLDER + "standings.csv"
+    standings_df = pd.read_csv(path, nrows=3)
+    standings_df = standings_df[['Rank', 'Striker', 'Goals']]
+    
+    return standings_df
 
 def get_leaders(df: pd.DataFrame):
     results = df[[f"{name} Points" for name in NAMES]]
@@ -105,9 +118,15 @@ def get_snipers(df):
     
     return sorted_dict(snipers_dict)
 
+def get_top_scorers(df):
+    res = df.sort_values(by=['Rank'])
+    res = res[['Striker', 'Goals']]
+    res = res.rename(columns={'Striker': 'name', 'Goals': 'points'})
+    return list(res.T.to_dict().values())
 
-refresh_data()
-data_df = read_data()
+
+refresh_prediction_data()
+data_df = read_prediction_data()
 data_df = data_df.replace({np.nan: None})
 db = {}
 
@@ -115,6 +134,10 @@ db['leaders'] = get_leaders(data_df)
 db['pizda_streaks'] = get_pizda_streaks(data_df)
 db['games'] = get_games_data(data_df)
 db['snipers'] = get_snipers(data_df)
+
+refresh_standings_data()
+standings_df = read_standings_data()
+db['top_scorers'] = get_top_scorers(standings_df)
 
 with open(OUTPUT_FOLDER + "db.json", "w") as outfile: 
     json.dump(db, outfile)
